@@ -1,0 +1,14 @@
+<table style="margin-left: 90px;padding: 10px;width: 50%;">
+ 
+  <tr >
+    <th><input #myuser type="text"  [placeholder]="userName"/><th>
+    <th><button (click)="onclick(myuser)" style="color:green;">ADD TASK</button></th>
+  </tr>
+ 
+  <tr *ngFor="let i of userlist; index as userno" style="padding: 10px;">
+    <td  style="color: white;">{{i}}</td>
+    <td>
+      <button (click)="ondelete(userno)"  style="margin-left: 200px;background-color: red;color: white">DELETE</button>
+    </td>
+  </tr>
+</table>
